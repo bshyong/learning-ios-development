@@ -9,13 +9,20 @@
 #import "MemoryGameViewController.h"
 
 @interface MemoryGameViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (nonatomic) int flipCount;
 @end
 
 @implementation MemoryGameViewController
 
+- (void)setFlipCount:(int)flipCount{
+    _flipCount = flipCount;
+    self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+}
+
 - (IBAction)flipCard:(UIButton *)sender {
     sender.selected = !sender.isSelected;
+    self.flipCount++;
 }
 
 
