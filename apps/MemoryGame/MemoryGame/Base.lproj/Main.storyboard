@@ -139,11 +139,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z5x-m7-riX">
+                                <rect key="frame" x="204" y="439" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="flipsLabel" destination="2po-go-sEE" id="BxJ-mn-siC"/>
+                        <outlet property="scoreLabel" destination="Z5x-m7-riX" id="75r-4G-Y7O"/>
                         <outletCollection property="cardButtons" destination="boQ-rv-L3Y" id="ayI-Nd-BiH"/>
                         <outletCollection property="cardButtons" destination="BId-Fo-bTu" id="KNW-mH-wVU"/>
                         <outletCollection property="cardButtons" destination="bSS-Kw-80f" id="bYJ-X8-KJN"/>
