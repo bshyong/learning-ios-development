@@ -132,6 +132,46 @@
                                     <action selector="flipCard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="glF-Yy-oMw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ujI-59-soq">
+                                <rect key="frame" x="36" y="254" width="56" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title=""/>
+                                <state key="selected" title="Test"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gwi-vn-Ihn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1HJ-LW-m5n">
+                                <rect key="frame" x="100" y="254" width="56" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title=""/>
+                                <state key="selected" title="Test"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qCB-I7-BOl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d5B-KD-7fL">
+                                <rect key="frame" x="164" y="254" width="56" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title=""/>
+                                <state key="selected" title="Test"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WgV-cA-jud"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cGU-wc-Y2s">
+                                <rect key="frame" x="228" y="254" width="56" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title=""/>
+                                <state key="selected" title="Test"/>
+                                <connections>
+                                    <action selector="flipCard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gcn-Uh-AMD"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2po-go-sEE">
                                 <rect key="frame" x="20" y="439" width="121" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,6 +204,10 @@
                         <outletCollection property="cardButtons" destination="iln-GL-UdQ" id="4cq-B9-Bqt"/>
                         <outletCollection property="cardButtons" destination="dTL-Or-cB1" id="Of0-xB-gHq"/>
                         <outletCollection property="cardButtons" destination="Ze6-Yl-NPY" id="6mT-JX-lEQ"/>
+                        <outletCollection property="cardButtons" destination="ujI-59-soq" id="0B7-Mc-Lrw"/>
+                        <outletCollection property="cardButtons" destination="1HJ-LW-m5n" id="NcB-Jf-Hh6"/>
+                        <outletCollection property="cardButtons" destination="d5B-KD-7fL" id="n4g-zi-8eV"/>
+                        <outletCollection property="cardButtons" destination="cGU-wc-Y2s" id="T20-h5-Kau"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
