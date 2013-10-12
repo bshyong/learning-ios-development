@@ -17,6 +17,7 @@
 @property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastActionLabel;
 @end
 
 @implementation MemoryGameViewController
@@ -43,6 +44,7 @@
       cardButton.enabled = !card.isUnplayable;
       cardButton.alpha = (card.isUnplayable) ? 0.3 : 1.0;
     }
+    self.lastActionLabel.text = self.game.lastAction;
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
   }
 

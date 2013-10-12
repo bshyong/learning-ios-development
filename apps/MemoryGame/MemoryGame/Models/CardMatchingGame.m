@@ -12,6 +12,7 @@
   @property (readwrite, nonatomic) int score;
   //array of Cards
   @property (strong, nonatomic) NSMutableArray *cards;
+  @property (readwrite, nonatomic) NSString *lastAction;
 @end
 
 @implementation CardMatchingGame
@@ -19,6 +20,11 @@
     if(!_cards)  _cards = [[NSMutableArray alloc] init];
     return _cards;
   }
+
+-(NSString *)lastAction{
+  if(!_lastAction) _lastAction = [[NSString alloc] init];
+  return _lastAction;
+}
 
   #define MATCH_BONUS 4
   #define MISMATCH_PENALTY 2
@@ -28,15 +34,26 @@
     Card *card = [self cardAtIndex:index];
     if (card && !card.isUnplayable){
       if(!card.faceUp){
+        self.lastAction = [@[@"Flipped ", card.contents] componentsJoinedByString:@""];
         for (Card *otherCard in self.cards) {
           if (otherCard.isFaceUp && !otherCard.isUnplayable) {
             int matchScore = [card match:@[otherCard]];
             if (matchScore) {
               card.unplayable = YES;
               otherCard.unplayable = YES;
+              self.lastAction = [@[otherCard.contents,
+                                   @" and ",
+                                   card.contents,
+                                   [NSString stringWithFormat:@" matched!\nMatch bonus +%d", matchScore * MATCH_BONUS]]
+                                 componentsJoinedByString:@""];
               self.score += matchScore * MATCH_BONUS;
             }else{
               otherCard.faceUp = NO;
+              self.lastAction = [@[otherCard.contents,
+                                   @" and ",
+                                   card.contents,
+                                   [NSString stringWithFormat:@" don't match!\nMismatch penalty -%d", MISMATCH_PENALTY]]
+                                 componentsJoinedByString:@""];
               self.score -= MISMATCH_PENALTY;
             }
             break;
