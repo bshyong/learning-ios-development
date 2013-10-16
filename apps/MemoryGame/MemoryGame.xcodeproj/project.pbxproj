@@ -26,6 +26,8 @@
 		B57E3CFE18067CF20039374A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57E3CE018067CF20039374A /* UIKit.framework */; };
 		B57E3D0618067CF20039374A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B57E3D0418067CF20039374A /* InfoPlist.strings */; };
 		B57E3D0818067CF20039374A /* MemoryGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B57E3D0718067CF20039374A /* MemoryGameTests.m */; };
+		B5CD9B86180E506C00D50861 /* GameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9B85180E506C00D50861 /* GameResultViewController.m */; };
+		B5CD9B89180E522500D50861 /* GameResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9B88180E522500D50861 /* GameResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,10 @@
 		B57E3D0318067CF20039374A /* MemoryGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoryGameTests-Info.plist"; sourceTree = "<group>"; };
 		B57E3D0518067CF20039374A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B57E3D0718067CF20039374A /* MemoryGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryGameTests.m; sourceTree = "<group>"; };
+		B5CD9B84180E506C00D50861 /* GameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultViewController.h; sourceTree = "<group>"; };
+		B5CD9B85180E506C00D50861 /* GameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultViewController.m; sourceTree = "<group>"; };
+		B5CD9B87180E522500D50861 /* GameResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResult.h; sourceTree = "<group>"; };
+		B5CD9B88180E522500D50861 /* GameResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,10 @@
 				B57E3CEB18067CF20039374A /* MemoryGameAppDelegate.h */,
 				B57E3CEC18067CF20039374A /* MemoryGameAppDelegate.m */,
 				B57E3CEE18067CF20039374A /* Main.storyboard */,
+				B5CD9B87180E522500D50861 /* GameResult.h */,
+				B5CD9B88180E522500D50861 /* GameResult.m */,
+				B5CD9B84180E506C00D50861 /* GameResultViewController.h */,
+				B5CD9B85180E506C00D50861 /* GameResultViewController.m */,
 				B56726851807969600D7A034 /* Models */,
 				B57E3CF118067CF20039374A /* MemoryGameViewController.h */,
 				B57E3CF218067CF20039374A /* MemoryGameViewController.m */,
@@ -284,12 +294,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B567268B1807A48000D7A034 /* PlayingCard.m in Sources */,
+				B5CD9B86180E506C00D50861 /* GameResultViewController.m in Sources */,
 				B567268818079FEE00D7A034 /* Deck.m in Sources */,
 				B57E3CE918067CF20039374A /* main.m in Sources */,
 				B57E3CF318067CF20039374A /* MemoryGameViewController.m in Sources */,
 				B543DD1718086162009C2689 /* CardMatchingGame.m in Sources */,
 				B567268E1807B32900D7A034 /* PlayingCardDeck.m in Sources */,
 				B57E3CED18067CF20039374A /* MemoryGameAppDelegate.m in Sources */,
+				B5CD9B89180E522500D50861 /* GameResult.m in Sources */,
 				B56726841807967E00D7A034 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

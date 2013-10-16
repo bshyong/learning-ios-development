@@ -9,6 +9,7 @@
 #import "MemoryGameViewController.h"
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
+#import "GameResult.h"
 
 @interface MemoryGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -18,9 +19,15 @@
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastActionLabel;
+@property (strong, nonatomic) GameResult *gameResult;
 @end
 
 @implementation MemoryGameViewController
+
+  -(GameResult *)gameResult{
+    if (!_gameResult) _gameResult = [[GameResult alloc] init];
+    return _gameResult;
+  }
 
   - (CardMatchingGame *)game{
     if(!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
@@ -32,6 +39,13 @@
     _cardButtons = cardButtons;
     [self updateUI];
   }
+
+- (IBAction)deal {
+  self.game = nil;
+  self.gameResult = nil;
+  self.flipCount = 0;
+  [self updateUI];
+}
 
   //  reflect model changes in the UI
   - (void)updateUI{
@@ -57,5 +71,6 @@
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     self.flipCount++;
     [self updateUI];
+    self.gameResult.score = self.game.score;
   }
 @end
