@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Deck.h"
 
 @interface MemoryGameViewController : UIViewController
-
+  - (Deck *)createDeck; //abstract
+  @property (nonatomic)NSUInteger startingCardCount;
+  -(void)updateCell:(UICollectionViewCell *)cell usingCard:(Card *)card;
 @end
