@@ -13,7 +13,7 @@
 		B54C206318184ECF00768E7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B54C206118184ECF00768E7E /* InfoPlist.strings */; };
 		B54C206518184ECF00768E7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C206418184ECF00768E7E /* main.m */; };
 		B54C206918184ECF00768E7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C206818184ECF00768E7E /* AppDelegate.m */; };
-		B54C206C18184ECF00768E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54C206A18184ECF00768E7E /* Main.storyboard */; };
+		B54C206C18184ECF00768E7E /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54C206A18184ECF00768E7E /* iPhone.storyboard */; };
 		B54C207118184ECF00768E7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54C207018184ECF00768E7E /* Images.xcassets */; };
 		B54C207818184ECF00768E7E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54C207718184ECF00768E7E /* XCTest.framework */; };
 		B54C207918184ECF00768E7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54C205818184ECF00768E7E /* Foundation.framework */; };
@@ -25,6 +25,8 @@
 		B54C2095181894E900768E7E /* FlickrPhotoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C2094181894E900768E7E /* FlickrPhotoTVC.m */; };
 		B54C20981818974F00768E7E /* LatestFlickrPhotosTVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C20971818974F00768E7E /* LatestFlickrPhotosTVCViewController.m */; };
 		B54C209D181899EF00768E7E /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C209C181899EF00768E7E /* FlickrFetcher.m */; };
+		B556FE131819C4F3004A0E05 /* AttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B556FE121819C4F3004A0E05 /* AttributedStringViewController.m */; };
+		B5F055C31819ADE10053371C /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F055C21819ADE10053371C /* iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,7 @@
 		B54C206618184ECF00768E7E /* ShutterBug-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShutterBug-Prefix.pch"; sourceTree = "<group>"; };
 		B54C206718184ECF00768E7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B54C206818184ECF00768E7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B54C206B18184ECF00768E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B54C206B18184ECF00768E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		B54C207018184ECF00768E7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B54C207618184ECF00768E7E /* ShutterBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutterBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54C207718184ECF00768E7E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -66,6 +68,9 @@
 		B54C209A181899EF00768E7E /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
 		B54C209B181899EF00768E7E /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
 		B54C209C181899EF00768E7E /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
+		B556FE111819C4F3004A0E05 /* AttributedStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedStringViewController.h; sourceTree = "<group>"; };
+		B556FE121819C4F3004A0E05 /* AttributedStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedStringViewController.m; sourceTree = "<group>"; };
+		B5F055C21819ADE10053371C /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad.storyboard; path = ../iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,15 +133,18 @@
 				B54C2099181899EF00768E7E /* FlickrFetcher */,
 				B54C206718184ECF00768E7E /* AppDelegate.h */,
 				B54C206818184ECF00768E7E /* AppDelegate.m */,
-				B54C206A18184ECF00768E7E /* Main.storyboard */,
-				B54C2093181894E900768E7E /* FlickrPhotoTVC.h */,
+				B5F055C21819ADE10053371C /* iPad.storyboard */,
+				B54C206A18184ECF00768E7E /* iPhone.storyboard */,
 				B54C20961818974F00768E7E /* LatestFlickrPhotosTVCViewController.h */,
 				B54C20971818974F00768E7E /* LatestFlickrPhotosTVCViewController.m */,
+				B54C2093181894E900768E7E /* FlickrPhotoTVC.h */,
 				B54C2094181894E900768E7E /* FlickrPhotoTVC.m */,
 				B54C20901818857600768E7E /* HawaiiImageViewController.h */,
 				B54C20911818857600768E7E /* HawaiiImageViewController.m */,
 				B54C208D18184F1F00768E7E /* ImageViewController.h */,
 				B54C208E18184F1F00768E7E /* ImageViewController.m */,
+				B556FE111819C4F3004A0E05 /* AttributedStringViewController.h */,
+				B556FE121819C4F3004A0E05 /* AttributedStringViewController.m */,
 				B54C207018184ECF00768E7E /* Images.xcassets */,
 				B54C205F18184ECF00768E7E /* Supporting Files */,
 			);
@@ -258,9 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F055C31819ADE10053371C /* iPad.storyboard in Resources */,
 				B54C207118184ECF00768E7E /* Images.xcassets in Resources */,
 				B54C206318184ECF00768E7E /* InfoPlist.strings in Resources */,
-				B54C206C18184ECF00768E7E /* Main.storyboard in Resources */,
+				B54C206C18184ECF00768E7E /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +290,7 @@
 			files = (
 				B54C208F18184F1F00768E7E /* ImageViewController.m in Sources */,
 				B54C20981818974F00768E7E /* LatestFlickrPhotosTVCViewController.m in Sources */,
+				B556FE131819C4F3004A0E05 /* AttributedStringViewController.m in Sources */,
 				B54C209D181899EF00768E7E /* FlickrFetcher.m in Sources */,
 				B54C2095181894E900768E7E /* FlickrPhotoTVC.m in Sources */,
 				B54C206918184ECF00768E7E /* AppDelegate.m in Sources */,
@@ -316,12 +326,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B54C206A18184ECF00768E7E /* Main.storyboard */ = {
+		B54C206A18184ECF00768E7E /* iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B54C206B18184ECF00768E7E /* Base */,
 			);
-			name = Main.storyboard;
+			name = iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		B54C208018184ECF00768E7E /* InfoPlist.strings */ = {
@@ -415,7 +425,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShutterBug/ShutterBug-Prefix.pch";
 				INFOPLIST_FILE = "ShutterBug/ShutterBug-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -428,7 +440,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShutterBug/ShutterBug-Prefix.pch";
 				INFOPLIST_FILE = "ShutterBug/ShutterBug-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -494,6 +508,7 @@
 				B54C208918184ECF00768E7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B54C208A18184ECF00768E7E /* Build configuration list for PBXNativeTarget "ShutterBugTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +517,7 @@
 				B54C208C18184ECF00768E7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

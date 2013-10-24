@@ -8,8 +8,9 @@
 
 #import "FlickrPhotoTVC.h"
 #import "FlickrFetcher.h"
+#import "ImageViewController.h"
 
-@interface FlickrPhotoTVC ()
+@interface FlickrPhotoTVC () <UISplitViewControllerDelegate>
 
 @end
 
@@ -21,44 +22,35 @@
   [self.tableView reloadData];
 }
 
+#pragma mark - UISplitViewControllerDelegate
+
+-(void) awakeFromNib
+{
+  self.splitViewController.delegate = self;
+}
+
+-(BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation
+{
+  //  never hide the left hand side
+  return NO;
+}
+
+#pragma mark - Segue
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   if ([sender isKindOfClass:[UITableViewCell class]]) {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     if (indexPath) {
-      if ([segue.destinationViewController respondsToSelector:@selector(setImageURL:)])
-      {
-        NSURL *url = [FlickrFetcher urlForPhoto:self.photos[indexPath.row] format:FlickrPhotoFormatLarge];
-        [segue.destinationViewController performSelector:@selector(setImageURL:) withObject:url];
+      if ([segue.identifier isEqualToString:@"Show Image"]) {
+        if ([segue.destinationViewController respondsToSelector:@selector(setImageURL:)]) {
+          NSURL *url = [FlickrFetcher urlForPhoto:self.photos[indexPath.row] format:FlickrPhotoFormatLarge];
+          [segue.destinationViewController performSelector:@selector(setImageURL:) withObject:url];
+          [segue.destinationViewController setTitle:[self titleForRow:indexPath.row]];
+        }
       }
     }
   }
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
