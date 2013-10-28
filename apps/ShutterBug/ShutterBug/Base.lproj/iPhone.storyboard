@@ -9,16 +9,29 @@
             <objects>
                 <viewController id="2KW-3z-fmv" customClass="ImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UvU-uD-S7a"/>
-                        <viewControllerLayoutGuide type="bottom" id="6Oz-lV-JGx"/>
+                        <viewControllerLayoutGuide type="top" id="Yuu-tu-K4e"/>
+                        <viewControllerLayoutGuide type="bottom" id="NDH-t5-hfh"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="7zV-Si-JPH">
+                    <view key="view" contentMode="scaleToFill" id="Itn-av-rsG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </scrollView>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SfZ-WU-1E4">
+                                <rect key="frame" x="141" y="266" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zV-Si-JPH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
                     <navigationItem key="navigationItem" id="WUa-Oa-Mct"/>
                     <connections>
                         <outlet property="scrollView" destination="7zV-Si-JPH" id="xTp-OA-DMb"/>
+                        <outlet property="spinner" destination="SfZ-WU-1E4" id="LT0-Xm-jXV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv5-Ke-BPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,6 +81,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="x2V-hb-n3i"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="iRz-4x-bu4">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="VYe-ey-y8H" eventType="valueChanged" id="DtA-3N-MZX"/>
+                            <action selector="refreshPhotos:" destination="VYe-ey-y8H" eventType="valueChanged" id="0D2-en-CJR"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFe-jH-FJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

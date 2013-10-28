@@ -15,10 +15,36 @@
 
 @implementation LatestFlickrPhotosTVCViewController
 
+//- (IBAction)refreshPhotos:(id)sender {
+//  [self.refreshControl beginRefreshing];
+//  dispatch_queue_t loaderQ = dispatch_queue_create("flickr latest loader", NULL);
+//  dispatch_async(loaderQ, ^{
+//    NSArray *latestPhotos = [FlickrFetcher latestGeoreferencedPhotos];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//      self.photos = latestPhotos;
+//      [self.refreshControl endRefreshing];
+//    });
+//  });
+//}
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
   self.photos = [FlickrFetcher latestGeoreferencedPhotos];
+  [self.refreshControl addTarget:self action:@selector(loadLatestPhotosFromFlickr) forControlEvents:UIControlEventValueChanged];
+}
+
+-(void)loadLatestPhotosFromFlickr
+{
+  [self.refreshControl beginRefreshing];
+  dispatch_queue_t loaderQ = dispatch_queue_create("flickr latest loader", NULL);
+  dispatch_async(loaderQ, ^{
+    NSArray *latestPhotos = [FlickrFetcher latestGeoreferencedPhotos];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self.photos = latestPhotos;
+      [self.refreshControl endRefreshing];
+    });
+  });
 }
 
 @end
